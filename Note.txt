@@ -1,0 +1,309 @@
+1. What is the SQL?
+
+	SQL (Structured Query Language):
+
+		A standard computer language for relational databases management and data manipulation.
+
+		Used to query, insert, update and modify data.
+
+		◎ make up of descriptive words
+
+		◎ Non-procedural language:
+
+			- Cannot write complete applications
+
+			- Simple, but powerful
+
+2. How is SQL used?
+
+	◎ Read/retrieve data
+
+	◎ Write data - add data to table
+
+	◎ Update data - insert new data
+
+3. SQL and Database management systems
+
+	How you write syntax will depend on what DBMS you are using
+
+	◎ Each DBMS has its own "dialect"
+
+	◎ SQL can translate
+
+	◎ You will tweak based on the "dialect" your DBMS speaks
+
+4. Relational DBMS
+
+	Microsoft SQL Server, IBM DB2 Oracle, Sybase ASE, PostgreSQL, MySQL, Apache Open Office Base
+
+		SQLite (V, this class use.)
+
+5. Databases and Tables
+
+	◎ Database: A Container to store organized data or a set of related information
+
+	◎ Tables: A structured list of data or a specific type
+
+		- Column
+
+		- Row
+
+6. Relational V.S. Transactional model
+
+	◎ Relational Database Model: 
+
+		Allows for easy querying and data amnipulation in an easy, logical and intutitvie way
+
+	◎ Transactional Database Model:
+
+		Operational database (i.e. Insurance claims within a healthcare database)
+
+7. Data model building blocks
+
+	◎ Entity: Distinguishable, unique, and distinct (i.e. Person, place thing or event)
+
+	◎ Attribute: A characteristic of an entity
+
+	◎ Relationship: Describes association among entities
+
+		- One-to-many (i.e. customer to invoices)
+
+		- Many-to-many (i.e. student to classes)
+
+		- One-to-one (i.e. manager to store)
+
+8. ER diagrams
+
+	Composed bof entity types and specifies relationships that can exist between instances of
+
+	those entity types
+
+	◎ Show relationships
+
+	◎ Business process
+
+	◎ Represented visually
+
+	◎ Show links (primary keys)
+
+9. Primary keys and Foriegn keys
+
+	◎ Primary key:
+
+		A column (or a set of columns) whose values uniquely identify every row in a table
+
+	◎ Foriegn key:
+
+		One or more columns that can be used together to identify a single row in another table
+
+10. ER diagram notation
+
+	◎ Chen Notation:
+
+		- A One-to-Many(1:M) Relationship 
+
+			a "Painter" can paint many "Paintings"; each "Painting" is painted by one "Painter"
+
+		- A Many-to-Many(M:N) Relationship
+
+			an "Employee" can learn many "Skills", each "Skill" can be learned by many "Employees"
+
+		- A One-to-One(1:1) Relationship
+
+			an "Employee" manages a "Store"; each "Store" is managed by one "Employee"
+
+	◎ Crow's Foot Notation
+
+	◎ UML Class Diagram Notation
+
+11. Why tables are useful
+
+	◎ Make models and predictions
+
+	◎ Create dashboards
+
+	◎ Visualize data with other tools
+
+	◎ Extract data from other sources
+
+12. Nulls and Primary keys
+
+	When creating a tables is defining whether a column can contain a null value or is a primary key
+
+	The primary key can not be null, must have a value
+
+13. Why create temporary tables?
+
+	Temporary tables will be deleted when current session is terminated
+
+	◎ Faster than creating a real table
+
+	◎ Useful for complex queries using subsets and joins
+
+14. Why filter?
+
+	◎ Be specific about the data you want to retrieve
+
+	◎ Reduce the number of records you retrieve
+
+	◎ Increase query performance
+
+	◎ Reduce the strain on the client application
+
+	◎ Governance limitations
+
+15. What are Wildcards?
+
+	◎ Special character used to match parts of a value
+
+	◎ Search pattern made from literal text, wildcard character, or a combination
+
+	◎ Uses LIKE as an operator (through technically a predicate)
+
+	◎ Can only be used with strings
+
+	◎ Cannnot be used for non-text datatypes
+
+	◎ Helpful for data scientists as they explore string variables
+
+16. Downsides of Wildcards
+
+	◎ Takes longer to run
+
+	◎ Better to use another operator
+
+	◎ Statements with wildcards will take longer to run if used at the end of search patterns
+
+	◎ Placement of wildcards is important
+
+17. IN V.S. OR
+
+	Benifits of IN
+
+	◎ Long list of options
+
+	◎ IN executes faster than OR
+
+	◎ Don't have to think about the order with IN
+
+	◎ Can contain another {SELECT}
+
+18. OR with AND
+
+	◎ SQL process {AND} before {OR}
+
+19. WHERE v.s. HAVING
+
+	◎ {WHERE} filters before data is grouped
+
+	◎ {HAVING} filters after data is grouped
+
+	
+
+※  Some Keywords (or syntaxs)
+
+	◎ Limit Result: Prevent load all data for large database
+
+	◎ Create Table: Create own table
+
+	◎ Insert: Add data to the table
+
+	◎ Create Temporary Table
+
+	◎ Add comments: single line and section
+
+	◎ Where:
+
+		◎ a filter for matching or non-matching some condition like '>', '<', '=', '<>'(not equal),
+
+		and so on.
+
+		i.e. {WHERE ProduceName = 'Tofu';} or {WHERE Price >= 75;}
+
+		◎ It always after {SELECT} and {FROM}.
+
+		◎ Doesn't work for groups
+
+	◎ Between, And, Is Null: lock a specific range or judge whether null or not
+
+	◎ In operator:
+
+		- Specific a range of conditions
+
+		- Comma delimited list of values
+
+		- Enclosed in ()
+
+	◎ OR, AND, NOT
+
+	◎ Wildcard:
+
+		- %: for string type, not match NULLs
+
+		- _: match a single character
+
+		- []: specify a set of characters in a specific location
+
+	◎ 	 BY:
+
+		- Takes the name of one or more columns
+
+		- Add a comma after each additional column name
+
+		- Can sort by a column not retrieved
+
+		- Must always be the last clause in a select statement
+
+	◎ DESC, ASC: descending, ascending
+
+	◎ AVG(): NULL value will be ignored
+
+	◎ COUNT(): NULL value will be ignored when you only choose single column
+
+	◎ MAX(), MIN(): NULL value will be ignored
+
+	◎ DISTINCT
+
+	◎ GROUP BY (doesn't sort): 
+
+		- NULLs will be grouped together if your GROUP BY contains NULLs
+
+		- replace {WHERE} by {HAVING}
+---------------------------------------------------------------------------------------------------
+Else: 
+
+1. Who uses SQL?
+
+	Backend developer, QA Engineer, Database Admin(DBA), Data Analyst, System Admin, Data Architect,
+
+		ETL Developer, Systems Engineer, Data Scientist
+
+2. Database Administrator or Data Scientist
+
+	◎ DA (Database Administrator):
+
+		- Manages/governs entire database
+
+		- Give permissions to users
+
+		- Determines access to data
+
+		- Manages and create table
+
+		- Uses SQL to query and retrieve data
+
+	◎ DS (Data Scientist):
+
+		- End user of a database
+
+		- Uses SQL to query and retrieve data
+
+3. How do data scientist use SQL?
+
+	◎ Retrieve data
+
+	◎ May create their own table or test environment
+
+	◎ Combine multiple sources together
+
+	◎ Write complex queries fro analysis
