@@ -198,7 +198,15 @@
 
 	◎ {HAVING} filters after data is grouped
 
-	
+20. Subquery
+
+	A query mbedded into other queries.
+
+	◎ Relational databases store data in multiple tables
+
+	◎ Merge data from multiple sources together
+
+	◎ Helps with adding other filtering criteria
 
 ※  Some Keywords (or syntaxs)
 
