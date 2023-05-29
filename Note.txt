@@ -200,13 +200,81 @@
 
 20. Subquery
 
-	A query mbedded into other queries.
+	A query embedded into other queries
 
 	◎ Relational databases store data in multiple tables
 
 	◎ Merge data from multiple sources together
 
 	◎ Helps with adding other filtering criteria
+
+21. Joins
+
+	◎ Associate correct records from each table on the fly
+
+	◎ Allows data retrieval from multiple tables in one query
+
+	◎ Joins are not physical - they persist for the duration of the query execution
+
+	◎ Cartesian (Cross) Joins: each row from the first table joins with all the row of another table
+
+		- Not frequently use
+
+		- Computationally taxing
+
+		- Will return products with the incorrect vendor or no vendor at all
+
+	◎ Inner Join: select record that have matching value in both tables
+
+		- Join type is specified (INNER JOIN)
+
+		- Join condition is in the FROM clause and uses the ON clause
+
+		- Joining more tables together affects overall database performance
+
+		- You can join multiple tables, no limit
+
+		- List all the tables, then define conditions
+
+22. Alias
+
+	SQL aliases give a table or a column a temporary name
+
+	◎ Make column names more readable
+
+	◎ An alias only exist for the duration of the query
+
+23. Self Joins
+
+	Match customers from the same city
+
+	◎ Take the table and treat it like two seperate tables
+
+	◎ Join the original table to itself
+
+24. Advanced Joins
+
+	◎ Left Join: Return all records from the left table (table1), and the matched records from the right table (table2)
+
+		result: NULL from the right side, of there is no match
+
+	◎ Right Join: Return all records from the right table (table2), and the matched records from the left table (table1)
+
+		result: NULL from the left side, when there is no match
+
+	◎ Full Outer Join: Return all records when there is a match in either left (table1) or right (tables) table records
+
+		result: Give me everything
+
+25. Unions
+
+	The {UNION} operator is used to combine the result-set of two or more {SELECT} Statements
+
+	◎ Each {SELECT} statement within {UNION} must have the same number of columns
+
+	◎ Columns must have similar data types
+
+	◎ The columns in each {SELECT} statement must be in the same order
 
 ※  Some Keywords (or syntaxs)
 
