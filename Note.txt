@@ -276,6 +276,34 @@
 
 	◎ The columns in each {SELECT} statement must be in the same order
 
+26. String Variables
+
+	Retrieve the data in the format you need 
+
+	i.e. Client vs server formatting
+
+	◎ Support Joins
+
+	◎ String Functions:
+
+		- Concatenate ('||'): connect two strings
+
+		- Substring (SUBSTR): return the specified number of characters from a particular position of a given string
+
+		- Trim ({TRIM}, {RTRIM}, {LTRIM})
+
+		- Upper, Lower ({UPPER}, {LOWER}, {UCASE})
+
+27. Date Formats
+
+	◎ DATE: TTTT-MM-DD
+
+	◎ DATETIME: YYYY-MM-DD HH:MI:SS
+
+	◎ TIMESTAMP: YYYY-MM-DD HH:MI:SS
+
+28. 
+
 ※  Some Keywords (or syntaxs)
 
 	◎ Limit Result: Prevent load all data for large database
@@ -345,6 +373,8 @@
 		- NULLs will be grouped together if your GROUP BY contains NULLs
 
 		- replace {WHERE} by {HAVING}
+	
+	◎ Date and Time strings
 ---------------------------------------------------------------------------------------------------
 Else: 
 
