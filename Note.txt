@@ -306,6 +306,16 @@
 
 	Mimic if-then-else statement found in most programming languages. Can be used in {SELECT}, {INSERT}, {UPDATE}, and {DELETE} statements
 
+29. Overview of views
+
+	A stored query
+
+	◎ Can add or remove columns without changing schema
+
+	◎ Use it to encapsulate queries
+
+	◎ The view will be removed after database connection has ended
+
 ※  Some Keywords (or syntaxs)
 
 	◎ Limit Result: Prevent load all data for large database
@@ -377,6 +387,8 @@
 		- replace {WHERE} by {HAVING}
 	
 	◎ Date and Time strings
+
+	◎ {VIEW}
 ---------------------------------------------------------------------------------------------------
 Else: 
 
