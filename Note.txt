@@ -302,7 +302,9 @@
 
 	◎ TIMESTAMP: YYYY-MM-DD HH:MI:SS
 
-28. 
+28. Case Statement
+
+	Mimic if-then-else statement found in most programming languages. Can be used in {SELECT}, {INSERT}, {UPDATE}, and {DELETE} statements
 
 ※  Some Keywords (or syntaxs)
 
